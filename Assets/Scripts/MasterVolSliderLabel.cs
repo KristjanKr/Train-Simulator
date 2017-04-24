@@ -6,19 +6,18 @@ using UnityEngine.UI;
 public class MasterVolSliderLabel : MonoBehaviour {
 
     Text txt;
-    private float currentMusicVolume = 0;
+    private float currentMasterVolume = 0;
 
 	// Use this for initialization
 	void Start () {
-        currentMusicVolume = 0;
         txt = gameObject.GetComponent<Text>();
-        txt.text = "Volume : " + currentMusicVolume;
+        txt.text = "Volume : " + currentMasterVolume;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        txt.text = "Volume : " + currentMusicVolume;
-        currentMusicVolume = audioManager.storedMusicVolumeValue;
-        PlayerPrefs.SetFloat("Slider Label", currentMusicVolume);
+        txt.text = "Volume : " + currentMasterVolume;
+        currentMasterVolume = centralPrefs.Instance.MasterVolume;
+        PlayerPrefs.SetFloat("Slider Label", currentMasterVolume);
     }
 }

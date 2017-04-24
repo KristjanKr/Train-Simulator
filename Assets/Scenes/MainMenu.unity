@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 83533077}
   - component: {fileID: 83533079}
   m_Layer: 5
-  m_Name: Slider Label
+  m_Name: Master Slider Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Hello
+  m_Text: 
 --- !u!222 &83533078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -404,7 +404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac7417f8cd627549aefc964117e023b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storedMusicVolumeValue: 0
 --- !u!1 &131638036
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainSoundSlider: {fileID: 1793973494}
   musicSoundSlider: {fileID: 369457442}
+  storedMusicVolumeValue: 0
 --- !u!82 &231035177
 AudioSource:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ RectTransform:
   - {fileID: 1603558101}
   - {fileID: 617741622}
   m_Father: {fileID: 1511733218}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1216,6 +1216,92 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &509379972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 509379973}
+  - component: {fileID: 509379976}
+  - component: {fileID: 509379975}
+  - component: {fileID: 509379974}
+  m_Layer: 5
+  m_Name: Music Slider Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &509379973
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509379972}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999344, y: 0.99999344, z: 0.99999344}
+  m_Children: []
+  m_Father: {fileID: 1511733218}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 243.00003, y: -158.79997}
+  m_SizeDelta: {x: 306, y: 28.533335}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &509379974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509379972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae55567d4577544a8b6fde17a6a9145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &509379975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509379972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &509379976
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509379972}
 --- !u!1 &514097507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,6 +3219,7 @@ RectTransform:
   - {fileID: 83533076}
   - {fileID: 1793973493}
   - {fileID: 2040869344}
+  - {fileID: 509379973}
   - {fileID: 369457441}
   - {fileID: 2044180794}
   m_Father: {fileID: 1373339243}
@@ -4125,7 +4212,7 @@ RectTransform:
   m_Children:
   - {fileID: 38531036}
   m_Father: {fileID: 1511733218}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
