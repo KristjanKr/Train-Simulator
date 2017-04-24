@@ -13,7 +13,7 @@ public class audioManager : MonoBehaviour {
 
 	private GameObject musicAudioObject;
 
-	private float storedMusicVolumeValue;
+	public float storedMusicVolumeValue;
 
 	private AudioSource audioSource;
 
