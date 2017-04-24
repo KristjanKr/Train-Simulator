@@ -6,6 +6,7 @@ TagManager:
   tags:
   - withAudioSource
   - withMusicAudioSource
+  - temporarelyVisibleCanvas
   layers:
   - Default
   - TransparentFX
