@@ -7,6 +7,8 @@ public class goldController : MonoBehaviour {
 
 	private Text text;
 
+	public Text secondaryGoldText;
+
 	public Slider slider;
 
 	public float maxGoldAmount;
@@ -48,6 +50,8 @@ public class goldController : MonoBehaviour {
 		text.text = centralPrefs.Instance.lastUpdatedGoldAmount.ToString() + " gold";
 
 		currentGold = centralPrefs.Instance.lastUpdatedGoldAmount;
+
+		secondaryGoldText.text = "starting money " + centralPrefs.Instance.lastUpdatedGoldAmount.ToString ();
 
 		visibilityController.commandExecuted();
 
