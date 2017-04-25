@@ -7,6 +7,12 @@ public class goldController : MonoBehaviour {
 
 	private Text text;
 
+	public Slider slider;
+
+	public float maxGoldAmount;
+
+	public static float currentGold;
+
 	private visibilityCommandController visibilityController;
 
 	// Use this for initialization
@@ -41,6 +47,8 @@ public class goldController : MonoBehaviour {
 
 		text.text = centralPrefs.Instance.lastUpdatedGoldAmount.ToString() + " gold";
 
+		currentGold = centralPrefs.Instance.lastUpdatedGoldAmount;
+
 		visibilityController.commandExecuted();
 
 	}
@@ -51,6 +59,16 @@ public class goldController : MonoBehaviour {
 
 		updateGoldAmount ();
 
+
+	}
+
+	public void sliderGoldChange () {
+
+		visibilityController.dragging = true;
+
+		centralPrefs.Instance.lastUpdatedGoldAmount = (int) (slider.value * maxGoldAmount);
+
+		updateGoldAmount ();
 
 	}
 

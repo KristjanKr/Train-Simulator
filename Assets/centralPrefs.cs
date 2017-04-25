@@ -16,7 +16,7 @@ public class centralPrefs : MonoBehaviour {
 
 	public int lastUpdatedGoldAmount {
 
-		get { return PlayerPrefs.GetInt ("lastUpdatedGold", 50000); }
+		get { return PlayerPrefs.GetInt ("lastUpdatedGold", 0); }
 
 		set { PlayerPrefs.SetInt ("lastUpdatedGold", value); }
 

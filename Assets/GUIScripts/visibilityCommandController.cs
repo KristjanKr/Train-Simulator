@@ -9,6 +9,10 @@ public  class visibilityCommandController : MonoBehaviour {
 
 	private float canvasAlpha;
 
+	public bool dragging;
+
+	private bool inCoroutine;
+
 	[Header ("transition to transparent feature controll")]
 
 	[Tooltip ("this should be very low")]
@@ -43,6 +47,8 @@ public  class visibilityCommandController : MonoBehaviour {
 
 	public IEnumerator transitionToTransparent () {
 
+		inCoroutine = true;
+
 		while (canvasAlpha > 0) {
 
 			canvasAlpha -= canvasAplphaDecrement;
@@ -53,9 +59,23 @@ public  class visibilityCommandController : MonoBehaviour {
 
 		}
 
+		if (canvasAlpha <= 0)
+			inCoroutine = false;
+
 	}
 
 	public void commandExecuted () {
+
+		if (dragging) {
+
+			visibilityAdjustmentCanvas.GetComponent <CanvasGroup> ().alpha = 1;
+			return;
+
+		}
+
+
+		if (inCoroutine)
+			return;
 
 		canvasAlpha = 1;
 
